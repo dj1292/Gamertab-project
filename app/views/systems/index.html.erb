@@ -1,0 +1,8 @@
+<h1>Systems list:</h1>
+
+<ul>
+<% @systems.each do |system| %>
+<h2>Name: <%= system.name %></h2>
+<li>Number of players: <h3><%= system.num_of_players %></h3></li><br>
+<% end %>
+</ul>

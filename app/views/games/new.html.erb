@@ -1,0 +1,7 @@
+<%= form_for @game, method: :post do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %> <br>
+<%= f.label :num_of_players %>
+<%= f.text_field :num_of_players %> <br>
+<%= f.submit %>
+<% end %>

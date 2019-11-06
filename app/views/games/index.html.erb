@@ -1,0 +1,8 @@
+<h1>Games list:</h1>
+
+<ul>
+<% @games.each do |game| %>
+<h2>Title: <%= game.title %></h2>
+<li>Number of players: <h3><%= game.num_of_players %></h3></li><br>
+<% end %>
+</ul>
