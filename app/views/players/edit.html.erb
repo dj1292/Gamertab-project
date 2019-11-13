@@ -1,0 +1,9 @@
+<%= form_for @player, method: :patch do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %> <br>
+<%= f.label :username %>
+<%= f.text_field :username %> <br>
+<%= f.label :bio %>
+<%= f.text_area :bio %> <br>
+<%= f.submit %>
+<% end %>

@@ -1,9 +1,14 @@
-<h1>Players list:</h1>
+<h1>All the players</h1>
+
+<%= link_to "Create Profile", new_player_path %>
 
 <ul>
 <% @players.each do |player| %>
-<h2>Name: <%= player.name %></h2>
+<h2>Name: <%= link_to player.name, player_path(player) %></h2><br>
 <h3>Username:<li><%= player.username %></li></h3>
 <h4>Bio:<li><%= player.bio %></li></h4><br>
+<%= link_to "Edit", edit_player_path(player) %> 
+<%= button_to "Delete", player, :method => :delete, data: {confirm: 'Are you sure? Leaving so soon??'} %>
 <% end %>
+
 </ul>

@@ -8,3 +8,15 @@
     <b>Bio:</b> <%= @player.bio %>
 </p>
 
+<p><b>Games:</b>
+    <% @player.games.map do |game| %>
+    <h3><b><li><%= link_to game.title, game_path(game) %></b></li></h3>
+    <% end %>
+</p>
+
+<p><b>Systems:</b>
+    <% @player.systems.uniq.map do |system|  %>
+    <h3><b><li><%= link_to system.name, system_path(system) %></li></b></h3>
+    <% end %>
+</p>
+

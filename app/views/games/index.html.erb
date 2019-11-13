@@ -2,7 +2,8 @@
 
 <ul>
 <% @games.each do |game| %>
-<h2>Title: <%= game.title %></h2>
-<li>Number of players: <h3><%= game.num_of_players %></h3></li><br>
+<h2><b>Title: <%= game.title %></b></h2>
+<li>Number of players: <h3><%= game.num_of_players %></h3></li>
+<%= link_to "Edit", edit_game_path(game) %>
 <% end %>
 </ul>

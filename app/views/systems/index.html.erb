@@ -2,7 +2,11 @@
 
 <ul>
 <% @systems.each do |system| %>
-<h2>Name: <%= system.name %></h2>
-<li>Number of players: <h3><%= system.num_of_players %></h3></li><br>
+<h2><b>Name: <%= link_to system.name, system_path(system) %></b></h2>
+<li><b>Number of players: <h3><%= system.num_of_players %></b></h3></li>
+<%= link_to "Edit", edit_system_path(system) %>
+<br>
+<br>
+<%= button_to "Delete", system, :method => :delete %>
 <% end %>
 </ul>
